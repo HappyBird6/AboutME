@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .header {
+            padding: 10px;
+            text-align: center;
+            background: white;
+        }
+
+        .navigator {
+            overflow: hidden;
+            background-color: #ffec80;
+            margin : 0 auto;
+        }
+
+        .navigator div {
+            float : left;
+            margin-top : 8px;
+            height: 100%;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .navigator div:hover {
+            background-color: rgb(255, 254, 201);
+        }
+
+        .content {
+            background-color: rgb(255, 254, 201);
+            width: 100%;
+            height: 500px;
+        }
+
+        #content_iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>ABOUT ME</h1>
+        <h5>@박영진 @HappyBird</h5>
+    </div>
+    <div class="navigator">
+        <div class="navi_item" id="intro" onclick="loadPage(`intro`)"><b>INTRO</b></div>
+        <div class="navi_item" id="bio" onclick="loadPage(`bio`)"><b>BIO</b></div>
+        <div class="navi_item" id="hobby" onclick="loadPage(`hobby`)"><b>HOBBY</b></div>
+        <div class="navi_item" id="comment" onclick="loadPage(`comment`)"><b>COMMENT</b></div>
+    </div>
+    <div class="content">
+        <iframe style="border:none" id="content_iframe"></iframe>
+    </div>
+</body>
+<script>
+    let content = document.getElementsByClassName("content");
+    let navi_item = document.getElementsByClassName("navi_item");
+    let content_iframe = document.querySelector('#content_iframe');
+    let startPage = "hobby";
+    window.onload = () => {
+        document.getElementById(`${startPage}`).style.backgroundColor = "rgb(255, 254, 201)";
+        content_iframe.src = `./${startPage}.html`;
+    }
+    function loadPage(page) {
+        console.log(`Load Page : ${page}.html`);
+        for (let i = 0; i < navi_item.length; i++) {
+            navi_item[i].style.backgroundColor = "#ffec80";
+        }
+        let navi_bar = document.getElementById(`${page}`);
+        navi_bar.style.backgroundColor = "rgb(255, 254, 201)";
+        content_iframe.src = `./${page}.html`;
+    }
+</script>
+
+</html>
