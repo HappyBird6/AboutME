@@ -5,25 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style type = "text/css">
-        .thumbnail{
-            border : 1px solid black;
-            width : 100px;
+    <style type="text/css">
+        .panel {
+            display: block;
+            margin-top: 23px;
+            margin-left:15px;
+        }
+
+        .panel > div {
+            margin-right: 10px;
+        }
+
+        .thumbnail {
+            float: left;
+            width: 100px;
             height: 100px;
         }
-        .thumbnail:nth-child(even){
-            position: absolute;
+        .description{
+            margin-left: 15px;
+        }
+        .title {
+            height: 20px;
+            width : 250px;
+            border-bottom: 1px dotted black;
+        }
+        .text {
+            height: 80px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <div class="thumbnail"></div>
+    <p>PC 게임도 좋아하고 콘솔 게임도 종종하며 <br>
+    보드게임도 자주하러 갑니다.</p>
+    <div class="panel">
+        <div class="thumbnail"><img src="./assets/imgs/tft.jpg"></div>
+        <div class="description">
+            <div class="title">Team Fight Tactics</div>
+            <div class="text">최근 가장 재밌게 하는 게임</div>
+        </div>
     </div>
-
-    <div>
-        <div class="thumbnail"></div>
+    <div class="panel">
+        <div class="thumbnail"><img src="./assets/imgs/eft.webp"></div>
+        <div class="description">
+            <div class="title">Escape From Tarkov</div>
+            <div class="text">종종하는 총 게임</div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="thumbnail"><img src="./assets/imgs/poe.jfif"></div>
+        <div class="description"> 
+            <div class="title">Path of Exile</div>
+            <div class="text">시즌 열릴 때마다 하는 게임</div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="thumbnail"><img src="./assets/imgs/poker.jfif"></div>
+        <div class="description"> 
+            <div class="title">Poker</div>
+            <div class="text">보드게임방 가서 자주하는 게임</div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="thumbnail"><img src="./assets/imgs/lostark.jpg"></div>
+        <div class="description"> 
+            <div class="title">Lost Ark</div>
+            <div class="text">제일 열심히 했던 게임</div>
+        </div>  
+    </div>
+    <div class="panel">
+        <div class="thumbnail"><img src="./assets/imgs/fishing.jfif"></div>
+        <div class="description"> 
+            <div class="title">Fishing</div>
+            <div class="text">종종 가족이랑 낚시</div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="thumbnail"><img src="./assets/imgs/musical.jfif"></div>
+        <div class="description"> 
+            <div class="title">Musical</div>
+            <div class="text">내한한 뮤지컬 보는 것 좋아합니다. 레미제라블이 원픽</div>
+        </div>
     </div>
 </body>
 
