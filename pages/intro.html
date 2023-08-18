@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
     <style type = "text/css">
         #img{
             width: 100px;
             height : auto;
+        }
+        .top_frame{
+            border-bottom : 1px dotted black;
         }
         .top_frame div{
             display: inline-block;
@@ -25,6 +29,7 @@
         .top_frame_right a{
             margin-block-end : 15px;
             margin-left : 15px;
+            margin-right:15px;
             font-size: 15px;
         }
         .top_frame_right a{
@@ -39,8 +44,11 @@
             display: block;
             padding-block-end: 15px;
         }
-        .right_frame{
+        .bottom_frame{
+            font-family:'normalFont';
             padding-left: 15px;
+            padding-right:15px;
+            padding-top:20px;
         }
     </style>
 </head>
@@ -48,17 +56,17 @@
 <body>
     <div class="top_frame">
         <div class ="top_frame_left" id="img">
-            <img src = "./assets/imgs/happyowl.jpg" id="img"></img>
+            <img src = "../assets/imgs/happyowl.jpg" id="img"></img>
         </div>
         <div class ="top_frame_right">
-            <div><a href="http://github.com/HappyBird6" target='_blank'><img src="./assets/imgs/github.png"> github</a></div>
-            <div><a><img src="./assets/imgs/instagram.png"> instagram</a></div>
-            <div><a><img src="./assets/imgs/youtube.png"> youtube</a></div>
-            <div><a><img src="./assets/imgs/facebook.png"> facebook</a></div>
+            <div><a href="http://github.com/HappyBird6" target='_blank'><img src="../assets/imgs/github.png"> github</a></div>
+            <div><a><img src="../assets/imgs/instagram.png"> instagram</a></div>
+            <div><a><img src="../assets/imgs/youtube.png"> youtube</a></div>
+            <div><a><img src="../assets/imgs/facebook.png"> facebook</a></div>
         </div>
     </div>
-    <div class="right_frame">
-        안녕하세요. 박영진입니다
+    <div class="bottom_frame">
+        안녕하세요. 박영진입니다.
     </div>
 </body>
 </html>

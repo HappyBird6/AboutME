@@ -6,29 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About ME</title>
     <style type="text/css">
+        @font-face{
+            font-family : titleFont;
+            src : url('./assets/fonts/BebasNeue-Regular.ttf');
+        }
         .header {
             padding: 10px;
             text-align: center;
             background: white;
         }
-
+        .header h1{
+            font-family:'titleFont';
+            font-size:80px;
+            margin-top:-5px;
+            margin-bottom: -30px;
+        }
+        .header h5{
+            font-size:10px;
+        }
         .navigator {
+            
             overflow: hidden;
             background-color: #ffec80;
             margin : 0 auto;
         }
 
         .navigator div {
+            font-family:'titleFont';
+            font-size:18px;
             float : left;
             margin-top : 8px;
             height: 100%;
             color: #000000;
             text-align: center;
-            padding: 14px 10px;
+            padding: 14px 16px;
             text-decoration: none;
             cursor: pointer;
+            letter-spacing:2px;
         }
-
+        .navigator div:first-child{
+            margin-left:5px;
+        }
         .navigator div:hover {
             background-color: rgb(255, 254, 201);
         }
@@ -36,7 +54,7 @@
         .content {
             background-color: rgb(255, 254, 201);
             width: 100%;
-            height: 500px;
+            height: 600px;
         }
 
         #content_iframe {
@@ -65,10 +83,10 @@
     let content = document.getElementsByClassName("content");
     let navi_item = document.getElementsByClassName("navi_item");
     let content_iframe = document.querySelector('#content_iframe');
-    let startPage = "hobby";
+    let startPage = "intro";
     window.onload = () => {
         document.getElementById(`${startPage}`).style.backgroundColor = "rgb(255, 254, 201)";
-        content_iframe.src = `./${startPage}.html`;
+        content_iframe.src = `./pages/${startPage}.html`;
     }
     function loadPage(page) {
         console.log(`Load Page : ${page}.html`);
@@ -77,7 +95,7 @@
         }
         let navi_bar = document.getElementById(`${page}`);
         navi_bar.style.backgroundColor = "rgb(255, 254, 201)";
-        content_iframe.src = `./${page}.html`;
+        content_iframe.src = `./pages/${page}.html`;
     }
 </script>
 

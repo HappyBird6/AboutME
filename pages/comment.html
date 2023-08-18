@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        *{
+            font-family:'normalFont';
+        }
+        .screen{
+            width: 95%;
+            height: 95%;
+        }
+        .comment{
+            padding-left:20px;
+            padding-right:20px;
+            line-height: 51px;
+            width : 260px;
+            height: 50px;
+            border-radius: 10px;
+            margin-bottom:5px;
+            margin-left:15px;
+            background-color: rgb(255, 226, 146);
+        }
+        .comment:first-child{
+            margin-top: 23px;
+        }
+    </style>
+</head>
+
+<body>
+<div id = "screen"></div>
+</body>
+<script>
+    let comments =[
+        "알고리즘 재활중",
+        "열심히 살자",
+        "주절주절",
+        "아무말",
+        "comment 채우기용1",
+        "comment 채우기용2",
+        "comment 채우기용3",
+        "comment 채우기용4",
+        "comment 채우기용5",
+    ]
+    let screen = document.getElementById('screen');
+    window.onload = ()=>{
+        displayComment();
+    }
+    function displayComment(){
+        for(let i = 0;i<comments.length;i++){
+            let html = `<div class="comment">`;
+            html += comments[i];
+            html += '</div>'    
+            screen.innerHTML += html;
+        }
+    }
+</script>
+</html>
